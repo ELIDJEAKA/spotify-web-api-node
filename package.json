@@ -1,4 +1,5 @@
 {
+<<<<<<< HEAD
   "_from": "spotify-web-api-node",
   "_id": "spotify-web-api-node@2.5.0",
   "_inBundle": false,
@@ -33,17 +34,41 @@
     "url": "https://github.com/thelinmichael/spotify-web-api-node/issues"
   },
   "bundleDependencies": false,
+=======
+  "name": "spotify-web-api-node",
+  "version": "2.5.0",
+  "homepage": "https://github.com/thelinmichael/spotify-web-api-node",
+  "description": "A Node.js wrapper for Spotify's Web API",
+  "main": "./src/server.js",
+  "author": "Michael Thelin",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/thelinmichael/spotify-web-api-node.git"
+  },
+  "dependencies": {
+    "superagent": "^2.0.0"
+  },
+>>>>>>> 9ccbbe21029b626d3f991d3795c43fd1ac045348
   "config": {
     "blanket": {
       "pattern": "src",
       "data-cover-never": "node_modules"
     }
   },
+<<<<<<< HEAD
   "dependencies": {
     "superagent": "^2.0.0"
   },
   "deprecated": false,
   "description": "A Node.js wrapper for Spotify's Web API",
+=======
+  "scripts": {
+    "lint": "grunt jshint",
+    "test": "npm run lint && ./node_modules/.bin/mocha --bail",
+    "coveralls": "./node_modules/.bin/mocha -r blanket -R mocha-lcov-reporter | ./node_modules/coveralls/bin/coveralls.js"
+  },
+>>>>>>> 9ccbbe21029b626d3f991d3795c43fd1ac045348
   "devDependencies": {
     "blanket": "^1.1.7",
     "coveralls": "^2.11.2",
@@ -56,10 +81,15 @@
     "mockery": "^1.4.0",
     "should": "~3.0",
     "sinon": "~1.12.2",
+<<<<<<< HEAD
     "xunit-file": "0.0.5",
     "querystring": "~0.2.0"
   },
   "homepage": "https://github.com/thelinmichael/spotify-web-api-node",
+=======
+    "xunit-file": "0.0.5"
+  },
+>>>>>>> 9ccbbe21029b626d3f991d3795c43fd1ac045348
   "keywords": [
     "spotify",
     "echonest",
@@ -69,6 +99,7 @@
     "client",
     "web api"
   ],
+<<<<<<< HEAD
   "license": "MIT",
   "main": "./src/server.js",
   "name": "spotify-web-api-node",
@@ -82,4 +113,9 @@
     "test": "npm run lint && ./node_modules/.bin/mocha --bail"
   },
   "version": "2.5.0"
+=======
+  "browser": {
+    "./src/server.js": "./src/client.js"
+  }
+>>>>>>> 9ccbbe21029b626d3f991d3795c43fd1ac045348
 }

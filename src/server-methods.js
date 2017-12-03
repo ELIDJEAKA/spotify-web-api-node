@@ -13,11 +13,16 @@ module.exports = {
    *          token type and time to expiration. If rejected, it contains an error object. Not returned if a callback is given.
    */
   clientCredentialsGrant: function(options, callback) {
+<<<<<<< HEAD
     var request = AuthenticationRequest.builder()
+=======
+    return AuthenticationRequest.builder()
+>>>>>>> 9ccbbe21029b626d3f991d3795c43fd1ac045348
       .withPath('/api/token')
       .withBodyParameters({
         'grant_type' : 'client_credentials'
       })
+<<<<<<< HEAD
       .withHeaders({
         Authorization : ('Basic ' + new Buffer(this.getClientId() + ':' + this.getClientSecret()).toString('base64'))
       })
@@ -36,6 +41,14 @@ module.exports = {
     } else {
       return promise;
     }
+=======
+      .withBodyParameters(options)
+      .withHeaders({
+        Authorization : ('Basic ' + new Buffer(this.getClientId() + ':' + this.getClientSecret()).toString('base64'))
+      })
+      .build()
+      .execute(HttpManager.post, callback);
+>>>>>>> 9ccbbe21029b626d3f991d3795c43fd1ac045348
   },
 
   /**
@@ -48,7 +61,11 @@ module.exports = {
    *          Not returned if a callback is given.
    */
   authorizationCodeGrant: function(code, callback) {
+<<<<<<< HEAD
     var request = AuthenticationRequest.builder()
+=======
+    return AuthenticationRequest.builder()
+>>>>>>> 9ccbbe21029b626d3f991d3795c43fd1ac045348
       .withPath('/api/token')
       .withBodyParameters({
         'grant_type' : 'authorization_code',
@@ -57,6 +74,7 @@ module.exports = {
         'client_id' : this.getClientId(),
         'client_secret' : this.getClientSecret()
       })
+<<<<<<< HEAD
       .build();
 
     var promise = this._performRequest(HttpManager.post, request);
@@ -70,6 +88,10 @@ module.exports = {
     } else {
       return promise;
     }
+=======
+      .build()
+      .execute(HttpManager.post, callback);
+>>>>>>> 9ccbbe21029b626d3f991d3795c43fd1ac045348
   },
 
   /**
@@ -81,7 +103,11 @@ module.exports = {
    *          Not returned if a callback is given.
    */
   refreshAccessToken: function(callback) {
+<<<<<<< HEAD
     var request = AuthenticationRequest.builder()
+=======
+    return AuthenticationRequest.builder()
+>>>>>>> 9ccbbe21029b626d3f991d3795c43fd1ac045348
       .withPath('/api/token')
       .withBodyParameters({
         'grant_type' : 'refresh_token',
@@ -90,6 +116,7 @@ module.exports = {
       .withHeaders({
         Authorization : ('Basic ' + new Buffer(this.getClientId() + ':' + this.getClientSecret()).toString('base64'))
       })
+<<<<<<< HEAD
       .build();
 
     var promise = this._performRequest(HttpManager.post, request);
@@ -103,5 +130,9 @@ module.exports = {
     } else {
       return promise;
     }
+=======
+      .build()
+      .execute(HttpManager.post, callback);
+>>>>>>> 9ccbbe21029b626d3f991d3795c43fd1ac045348
   }
 };
