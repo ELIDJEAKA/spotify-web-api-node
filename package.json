@@ -24,7 +24,7 @@
   "_spec": "spotify-web-api-node",
   "_where": "/home/elidjeaka/dev/lang/nodejs/sails/spotify-authentification",
   "author": {
-    "name": "Michael Thelin"
+    "name": "elidje aka emmanuel"
   },
   "browser": {
     "./src/server.js": "./src/client.js"
